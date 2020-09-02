@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="겁나빠른웹개발/fontello.css">
+	<style type="text/css">
+		.tree, .tree ul{
+			padding-left: 20px;
+			list-style: none;
+		}
+		input[type="checkbox"]:checked ~ul{
+			display: none;
+		} 
+		/*-> check가 되면 ul태그들은 다 none*/
+		.tree input[type="checkbox"]{
+			display: none;
+		}
+		.tree a:before{
+	      content:'\e800';
+	      font-family: fontello;
+	    }
+		.tree a{
+
+		}
+	</style>
+</head>
+<body>
+	<ul class="tree">
+		<li>
+			<input type="checkbox" id="root">
+			<label for="root">ROOT</label>
+			<!-- 글자만 눌러도 체크가 됨 -->
+			<ul>
+				<li><a href="naver.com">1</a></li>
+				<li><a href="naver.com">2</a></li>
+				<li>
+					<input type="checkbox" name="" id="node3">
+					<label for="node3">3</label>
+					<ul>
+						<li><a href="naver.com">31</a></li>
+						<li><a href="naver.com">32</a></li>
+						<li><a href="naver.com">33</a></li>	
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	
+</body>
+</html>
